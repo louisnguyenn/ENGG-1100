@@ -9,7 +9,7 @@ and build media for my ENGG1100 robot term project.
 - `media/` – robot build photos and videos
 - `documentation/` – progress logs, notes, troubleshooting
 
-# Authors
+## Authors
 - Louis Nguyen
 - Edward Nache
 - Jayden Davidson
