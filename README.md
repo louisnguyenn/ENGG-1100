@@ -1,4 +1,4 @@
-# ENGG1100 Robot Project – Fall 2025
+# ENGG1100 Term Project – Fall 2025
 
 This repository contains all source code, documentation, test results,
 and build media for my ENGG1100 robot term project.
