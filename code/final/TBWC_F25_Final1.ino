@@ -6,8 +6,8 @@ const int in2 = 7;
 
 Servo servoMotor;
 
-int speed = 200;
-int task = 0;
+// max 255
+int speed = 235;
 
 void setup() {
   pinMode(enA, OUTPUT);
@@ -19,48 +19,20 @@ void setup() {
 }
 
 void loop() {
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);
+  analogWrite(enA, speed);
+  delay(4300);
 
-  switch (task) {
+  // STOP
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  analogWrite(enA, 0);
+  delay(1000);
 
-    case 0:
-      // FORWARD
-      digitalWrite(in1, LOW);
-      digitalWrite(in2, HIGH);
-      analogWrite(enA, speed);
-      delay(4500);
-
-      // STOP
-      digitalWrite(in1, LOW);
-      digitalWrite(in2, LOW);
-      analogWrite(enA, 0);
-
-      task = 1;
-      break;
-
-
-    case 1:
-      // REVERSE
-      digitalWrite(in1, HIGH);
-      digitalWrite(in2, LOW);
-      analogWrite(enA, speed);
-      delay(4500);
-
-      // STOP
-      digitalWrite(in1, LOW);
-      digitalWrite(in2, LOW);
-      analogWrite(enA, 0);
-
-      task = 2;
-      break;
-
-
-    case 2:
-      // STAY STOPPED
-      digitalWrite(in1, LOW);
-      digitalWrite(in2, LOW);
-      analogWrite(enA, 0);
-      break;
-  }
-
-  delay(10);
+  // REVERSE
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+  analogWrite(enA, speed);
+  delay(9999);
 }
