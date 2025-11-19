@@ -7,7 +7,7 @@ const int in2 = 7;
 Servo servoMotor;
 
 // max 255
-int speed = 235;
+int speed = 245;
 
 void setup() {
   pinMode(enA, OUTPUT);
@@ -19,10 +19,12 @@ void setup() {
 }
 
 void loop() {
+  servoMotor.write(0);
+  
   digitalWrite(in1, LOW);
   digitalWrite(in2, HIGH);
   analogWrite(enA, speed);
-  delay(4300);
+  delay(3900);
 
   // STOP
   digitalWrite(in1, LOW);
@@ -34,5 +36,5 @@ void loop() {
   digitalWrite(in1, HIGH);
   digitalWrite(in2, LOW);
   analogWrite(enA, speed);
-  delay(9999);
+  delay(10000);
 }
