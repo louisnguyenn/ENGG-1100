@@ -5,9 +5,8 @@ and build media for my ENGG1100 robot term project.
 
 ## Structure
 - `code/` – Arduino code (prototype, final, and testing scripts)
-- `hardware/` – wiring diagrams and schematics
-- `media/` – robot build photos and videos
-- `documentation/` – progress logs, notes, troubleshooting
+- `media/` – prototype and final robot build photos and videos
+- `documentation/` – progress logs, notes, engineering analysis
 
 ## Authors
 - Louis Nguyen
